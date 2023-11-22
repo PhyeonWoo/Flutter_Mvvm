@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:training/MVVM/views/mvvm_view.dart';
 
 void main() => runApp(MyApp());
@@ -31,10 +32,11 @@ class PatternHome extends StatelessWidget {
             ElevatedButton(
               child: const Text('MVVM PATTERN'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MVVMView()),
-                );
+                Get.to(MVVMView());
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => MVVMView()),
+                // );
               },
             ),
           ],
